@@ -17,6 +17,10 @@
       color: #f00;
       font-size: 14px;
     }
+
+    .myLoading >.loading-icon[data-icon='clock']{
+      background-image: url(../src/svg/clock.svg);
+    }
   </style>
 </head>
 <body ng-controller="MainCtrl">
@@ -29,7 +33,7 @@
   var TestModule = angular.module('TestApp', ['nx.widget'])
     .config(function (loadingProvider) {
       loadingProvider.setOptions({
-        icon: 'default',
+        icon: 'clock',
         cssClass: 'myLoading',
         loadingText: 'loading...'
       });
