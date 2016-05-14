@@ -14,6 +14,10 @@
   background: rgba(0, 0, 0, 0.6);
   z-index: 2000;
   border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .nx-widget-loading[data-visible] {
@@ -30,8 +34,35 @@
   width: 50px;
   height: 50px;
   background: url(../svg/default.svg) no-repeat center center;
-  background-image: url(../svg/gears.svg);
   background-size: cover;
+}
+
+.nx-widget-loading > .loading-icon[data-icon='default'] {
+  background-image: url(../svg/default.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='gears'] {
+  background-image: url(../svg/gears.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='hourglass'] {
+  background-image: url(../svg/hourglass.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='ring'] {
+  background-image: url(../svg/ring.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='spin'] {
+  background-image: url(../svg/spin.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='squares'] {
+  background-image: url(../svg/squares.svg);
+}
+
+.nx-widget-loading > .loading-icon[data-icon='wheel'] {
+  background-image: url(../svg/wheel.svg);
 }
 
 .nx-widget-loading > .loading-text {

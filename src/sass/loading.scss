@@ -1,40 +1,67 @@
 /**loading Start**/
-.absolute-center{
-  margin:auto;
+.absolute-center {
+  margin: auto;
   position: absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
+
+
 .nx-widget-loading {
-  width:100px;
-  height:100px;
-  background:rgba(#000,0.6);
-  z-index:2000;
+  width: 100px;
+  height: 100px;
+  background: rgba(#000, 0.6);
+  z-index: 2000;
   border-radius: 10px;
-  &[data-visible]{
+  user-select: none;
+  &[data-visible] {
     display: none;
   }
 
-  &[data-visible=true]{
+  &[data-visible=true] {
     display: block;
   }
 
-
   @extend .absolute-center;
-  >.loading-icon{
+  > .loading-icon {
     @extend .absolute-center;
-    top:-20%;
+    top: -20%;
     display: inline-block;
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
     background: url(../svg/default.svg) no-repeat center center;
-    background-image: url(../svg/gears.svg);
-    background-size:cover;
+    background-size: cover;
+
+    //loading type:
+    &[data-icon='default'] {
+      background-image: url(../svg/default.svg);
+    }
+
+    &[data-icon='gears'] {
+      background-image: url(../svg/gears.svg);
+    }
+
+    &[data-icon='hourglass'] {
+      background-image: url(../svg/hourglass.svg);
+    }
+
+    &[data-icon='ring'] {
+      background-image: url(../svg/ring.svg);
+    }
+    &[data-icon='spin'] {
+      background-image: url(../svg/spin.svg);
+    }
+    &[data-icon='squares'] {
+      background-image: url(../svg/squares.svg);
+    }
+    &[data-icon='wheel'] {
+      background-image: url(../svg/wheel.svg);
+    }
   }
 
-  >.loading-text{
+  > .loading-text {
     position: absolute;
     bottom: 5px;
     height: 30px;

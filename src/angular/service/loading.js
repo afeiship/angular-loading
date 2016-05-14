@@ -9,14 +9,11 @@
     '$timeout',
     '$compile',
     '$sce',
-    function ($rootScope, $timeout, $compile, $sce) {
+    'loading',
+    function ($rootScope, $timeout, $compile, $sce,defaults) {
 
       var scope, element;
-      var defaults = {
-        cssClass: '',
-        loadingText:'加载中...',
-        visible: false
-      };
+
       initial();
 
       return {
@@ -34,7 +31,9 @@
       }
 
       function show(inOptions){
-
+        var _visible=inOptions.visible;
+        angular.extend(scope,inOptions);
+        visible(_visible);
       }
 
       function visible(inVisible) {

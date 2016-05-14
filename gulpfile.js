@@ -28,6 +28,7 @@ var config = {
 var scripts = [
   './src/angular/main.js',
   './src/angular/directive/loading.js',
+  './src/angular/service/loading.provider.js',
   './src/angular/service/loading.js'
 ];
 
