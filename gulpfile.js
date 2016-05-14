@@ -51,6 +51,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.dist));
 });
 
+gulp.task('svg',function(){
+  return gulp.src('./src/svg/**')
+    .pipe(gulp.dest('dist/svg'));
+});
 
 gulp.task('scripts', function () {
   return gulp.src(scripts)
@@ -65,5 +69,5 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('default', ['clean'], function () {
-  gulp.start(['sass', 'scripts']);
+  gulp.start(['sass', 'scripts','svg']);
 });

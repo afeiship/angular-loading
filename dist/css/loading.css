@@ -1,0 +1,35 @@
+/**loading Start**/
+.absolute-center, .nx-widget-loading, .nx-widget-loading > .loading-svg {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.nx-widget-loading {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  border-radius: 10px;
+}
+
+.nx-widget-loading[data-visible] {
+  display: none;
+}
+
+.nx-widget-loading[data-visible=true] {
+  display: block;
+}
+
+.nx-widget-loading > .loading-svg {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url(../svg/gears.svg) no-repeat center center;
+  background-size: cover;
+}
+
+/**loading  End**/
