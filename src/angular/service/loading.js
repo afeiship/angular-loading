@@ -19,6 +19,7 @@
       return {
         init: initial,
         show: show,
+        hide: hide,
         visible: visible,
         destroy: destroy
       };
@@ -34,6 +35,10 @@
         var _visible=inOptions.visible;
         angular.extend(scope,inOptions);
         visible(_visible);
+      }
+
+      function hide(){
+        visible(false);
       }
 
       function visible(inVisible) {
