@@ -1,0 +1,30 @@
+{
+  "name": "angular-loading",
+  "description": "AngularJS directive that display loading/busy indicator based on http://loading.io/",
+  "main": "dist",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "loading",
+    "ionic",
+    "sass"
+  ],
+  "homepage": "https://github.com/afeiship/angular-loading",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
