@@ -13,7 +13,7 @@
       return {
         restrict: 'E',
         transclude: true,
-        template: '<div class="nx-widget-loading {{cssClass}}" data-visible="{{visible}}"><span class="loading-svg"></span></div>',
+        template: '<div class="nx-widget-loading {{cssClass}}" data-visible="{{visible}}"><span class="loading-icon"></span><div class="loading-text">{{loadingText}}</div></div>',
         scope: true
       };
     }]);
@@ -36,12 +36,14 @@
       var scope, element;
       var defaults = {
         cssClass: '',
+        loadingText:'加载中...',
         visible: false
       };
       initial();
 
       return {
         init: initial,
+        show: show,
         visible: visible,
         destroy: destroy
       };
@@ -51,6 +53,10 @@
 
         element = scope.element = $compile('<loading></loading>')(scope);
         jqLite(document.body).append(element);
+      }
+
+      function show(inOptions){
+
       }
 
       function visible(inVisible) {

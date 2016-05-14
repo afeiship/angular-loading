@@ -14,12 +14,14 @@
       var scope, element;
       var defaults = {
         cssClass: '',
+        loadingText:'加载中...',
         visible: false
       };
       initial();
 
       return {
         init: initial,
+        show: show,
         visible: visible,
         destroy: destroy
       };
@@ -29,6 +31,10 @@
 
         element = scope.element = $compile('<loading></loading>')(scope);
         jqLite(document.body).append(element);
+      }
+
+      function show(inOptions){
+
       }
 
       function visible(inVisible) {

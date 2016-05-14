@@ -1,5 +1,5 @@
 /**loading Start**/
-.absolute-center, .nx-widget-loading, .nx-widget-loading > .loading-svg {
+.absolute-center, .nx-widget-loading, .nx-widget-loading > .loading-icon {
   margin: auto;
   position: absolute;
   left: 0;
@@ -24,12 +24,25 @@
   display: block;
 }
 
-.nx-widget-loading > .loading-svg {
+.nx-widget-loading > .loading-icon {
+  top: -20%;
   display: inline-block;
   width: 50px;
   height: 50px;
-  background: url(../svg/gears.svg) no-repeat center center;
+  background: url(../svg/default.svg) no-repeat center center;
+  background-image: url(../svg/gears.svg);
   background-size: cover;
+}
+
+.nx-widget-loading > .loading-text {
+  position: absolute;
+  bottom: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
 }
 
 /**loading  End**/
