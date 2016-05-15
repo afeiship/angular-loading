@@ -9,8 +9,8 @@
 }
 
 .nx-widget-loading {
-  width: 100px;
-  height: 100px;
+  width: 10em;
+  height: 10em;
   background: rgba(0, 0, 0, 0.6);
   z-index: 2000;
   border-radius: 10px;
@@ -31,8 +31,8 @@
 .nx-widget-loading > .loading-icon {
   top: -20%;
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 5em;
+  height: 5em;
   background: url(../svg/default.svg) no-repeat center center;
   background-size: cover;
 }
@@ -67,13 +67,13 @@
 
 .nx-widget-loading > .loading-text {
   position: absolute;
-  bottom: 5px;
-  height: 30px;
-  line-height: 30px;
+  bottom: 0.5em;
+  height: 3em;
+  line-height: 3em;
   text-align: center;
   width: 100%;
   color: #fff;
-  font-size: 12px;
+  font-size: 1.2em;
 }
 
 /**loading  End**/
